@@ -58,10 +58,28 @@ clear
 echo '============================================='
 echo "Sila Masukkan DOMAIN, Jika TIADA KLIK Enter"
 echo '============================================='
-read -p "Hostname / Domain: " host
+mkdir -p /etc/rare
+mkdir -p /etc/rare/temp
+mkdir -p /etc/rare/log
+mkdir -p /etc/rare/xray
+mkdir -p /etc/rare/v2ray
+mkdir -p /etc/rare/tls
+mkdir -p /etc/rare/config-url
+mkdir -p /etc/rare/config-user
+mkdir -p /etc/rare/xray/conf
+mkdir -p /etc/rare/v2ray/conf
+mkdir -p /etc/systemd/system/
+mkdir -p /var/log/xray/
+mkdir -p /var/log/v2ray/
+mkdir /var/lib/premium-script;
+touch /etc/rare/xray/clients.txt
+touch /etc/rare/v2ray/clients.txt
 echo "IP=$host" >> /var/lib/premium-script/ipvps.conf
-echo "IP=$host" >> /var/lib/crot-script/ipvps.conf
-echo "$host" >> /etc/v2ray/domain
+echo "$host" > /etc/rare/xray/domain
+echo "$host" > /root/domain
+echo "$SCnewversion" > /home/version
+echo "@vpnshopee" > /home/contact
+cd
 clear
 echo '============================================='
 echo '        Installing SSH & OPENVPN '
